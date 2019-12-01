@@ -34,4 +34,24 @@ public class StateCensusAnalyser {
         }
         return count;
     }
+
+    public int findNumberOfCensusRecord(String indianStatesCensusInformationFile) {
+        int count = 0;
+        try {
+             Reader reader = Files.newBufferedReader(Paths.get(indianStatesCensusInformationFile));
+             CsvToBean<CSVStateCensus> csvToBean = new CsvToBeanBuilder(reader)
+                    .withType(CSVStateCensus.class)
+                    .withIgnoreLeadingWhiteSpace(true)
+                    .build();
+            Iterator<CSVStateCensus> csvUserIterator = csvToBean.iterator();
+            while (csvUserIterator.hasNext()) {
+                CSVStateCensus csvUser = csvUserIterator.next();
+                count++;
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return count;
+
+    }
 }

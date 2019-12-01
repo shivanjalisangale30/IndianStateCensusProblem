@@ -9,6 +9,10 @@ public class StateCensusAnalyserTest {
     private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).csv";
     private static final Object INDIAN_STATES_INFORMATION_FILE1 = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (2).csv" ;
 
+    private static final String INDIAN_STATES_CENSUS_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCensusData.csv";
+
+
+
     @Test
     public void givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords() {
         StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
@@ -64,5 +68,12 @@ public class StateCensusAnalyserTest {
         } catch (CSVStateException e) {
             Assert.assertEquals(CSVStateException.ExceptionType.DELIMETER_EXCEPTION ,e.type);
         }
+    }
+
+    @Test
+    public void givenIndianStateCensusInformation_whenProperAnalyse_shouldMatchRecords() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        int numberOfRecord = stateCensusAnalyser.findNumberOfCensusRecord(INDIAN_STATES_CENSUS_INFORMATION_FILE);
+        Assert.assertEquals(29,numberOfRecord);
     }
 }
