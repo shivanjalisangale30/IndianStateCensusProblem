@@ -52,6 +52,8 @@ public class StateCensusAnalyser {
             throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE ,"File not exist");
         }catch (IOException e) {
             e.printStackTrace();
+        }catch (RuntimeException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue ");
         }
         return count;
 
