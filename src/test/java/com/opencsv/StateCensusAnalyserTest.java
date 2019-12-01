@@ -9,7 +9,7 @@ public class StateCensusAnalyserTest {
     private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).csv";
     private static final Object INDIAN_STATES_INFORMATION_FILE1 = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (2).csv" ;
 
-    private static final String INDIAN_STATES_CENSUS_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCensusData.csv";
+    private static final String INDIAN_STATES_CENSUS_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCensusData.json";
     private static final String INDIAN_STATES_CENSUS_INFORMATION_FILE2 = "/home/admin142/Desktop/IndianStateCensusProblem/StateCensusData2.csv";
 
 
@@ -91,6 +91,16 @@ public class StateCensusAnalyserTest {
             Assert.assertEquals(29,numberOfCensusRecord);
         } catch (CSVStateException e) {
             Assert.assertEquals(CSVStateException.ExceptionType.NO_SUCH_FILE  ,e.type);
+        }
+    }
+
+    @Test
+    public void givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            stateCensusAnalyser.findNumberOfCensusRecord(INDIAN_STATES_CENSUS_INFORMATION_FILE);
+        } catch (CSVStateException e) {
+            Assert.assertEquals(CSVStateException.ExceptionType.NO_SUCH_FILE ,e.type);
         }
     }
 }
