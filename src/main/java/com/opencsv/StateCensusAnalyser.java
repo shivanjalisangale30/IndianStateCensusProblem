@@ -35,7 +35,7 @@ public class StateCensusAnalyser {
         return count;
     }
 
-    public int findNumberOfCensusRecord(String indianStatesCensusInformationFile) {
+    public int findNumberOfCensusRecord(String indianStatesCensusInformationFile) throws CSVStateException {
         int count = 0;
         try {
              Reader reader = Files.newBufferedReader(Paths.get(indianStatesCensusInformationFile));
@@ -48,6 +48,8 @@ public class StateCensusAnalyser {
                 CSVStateCensus csvUser = csvUserIterator.next();
                 count++;
             }
+        }catch (NoSuchFileException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE ,"File not exist");
         }catch (IOException e) {
             e.printStackTrace();
         }
