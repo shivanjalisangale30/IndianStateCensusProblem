@@ -53,7 +53,7 @@ public class StateCensusAnalyser {
         }catch (IOException e) {
             e.printStackTrace();
         }catch (RuntimeException e){
-            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue ");
+            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue Or Header Issue");
         }
         return count;
 

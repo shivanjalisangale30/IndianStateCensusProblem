@@ -114,4 +114,15 @@ public class StateCensusAnalyserTest {
             Assert.assertEquals(CSVStateException.ExceptionType.DELIMETER_EXCEPTION,e.type);
         }
     }
+
+    @Test
+    public void givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int numberOfCensusRecord = stateCensusAnalyser.findNumberOfCensusRecord(INDIAN_STATES_CENSUS_INFORMATION_FILE);
+            Assert.assertEquals(29,numberOfCensusRecord);
+        } catch (CSVStateException e) {
+            Assert.assertEquals(CSVStateException.ExceptionType.DELIMETER_EXCEPTION,e.type);
+        }
+    }
 }
