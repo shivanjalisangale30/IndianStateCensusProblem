@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-01T07:11:34" hostname="admin142-desktop" time="0.095">
+<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-01T07:34:05" hostname="admin142-desktop" time="0.003">
   <properties/>
-  <testcase name="givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.095"/>
+  <testcase name="givenIndianStateInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
