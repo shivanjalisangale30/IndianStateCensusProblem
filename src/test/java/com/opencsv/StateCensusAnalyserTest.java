@@ -1,11 +1,12 @@
 package com.opencsv;
 
+import com.sun.tools.jdeprscan.CSV;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class StateCensusAnalyserTest {
 
-    private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).csv";
+    private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).json";
     private static final Object INDIAN_STATES_INFORMATION_FILE1 = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (2).csv" ;
 
     @Test
@@ -32,5 +33,14 @@ public class StateCensusAnalyserTest {
         }
     }
 
-
+    @Test
+    public void givenIndianStateInformation_whenNotSupportedFileType_shouldHandleException() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int numberOfRecord = stateCensusAnalyser.findNumberOfRecord(INDIAN_STATES_INFORMATION_FILE);
+            Assert.assertEquals(37,numberOfRecord);
+        } catch (CSVStateException e) {
+            Assert.assertEquals(CSVStateException.ExceptionType.FILE_TYPE_NOT_SUPPORTED ,e.type);
+        }
+    }
 }

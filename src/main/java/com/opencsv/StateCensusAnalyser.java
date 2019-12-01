@@ -3,6 +3,7 @@ package com.opencsv;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -25,8 +26,10 @@ public class StateCensusAnalyser {
                 CSVStates csvUser = csvUserIterator.next();
                 count++;
                }
-        } catch (NoSuchFileException e){
-             throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "No such File Exist");
+        } catch (FileNotFoundException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "No such File Exist");
+        }catch (NoSuchFileException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.FILE_TYPE_NOT_SUPPORTED ,"File type not supported");
         }catch (IOException e) {
             e.printStackTrace();
         }
