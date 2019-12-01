@@ -3,7 +3,6 @@ package com.opencsv;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -31,7 +30,7 @@ public class StateCensusAnalyser {
         }catch (IOException e) {
             e.printStackTrace();
         }catch (RuntimeException e){
-            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue");
+            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue Or Hearder Issue");
         }
         return count;
     }
