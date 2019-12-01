@@ -26,12 +26,12 @@ public class StateCensusAnalyser {
                 CSVStates csvUser = csvUserIterator.next();
                 count++;
                }
-        } catch (FileNotFoundException e){
-            throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "No such File Exist");
-        }catch (NoSuchFileException e){
-            throw new CSVStateException(CSVStateException.ExceptionType.FILE_TYPE_NOT_SUPPORTED ,"File type not supported");
+        } catch (NoSuchFileException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE ,"File not exist");
         }catch (IOException e) {
             e.printStackTrace();
+        }catch (RuntimeException e){
+            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION , "File delimeter Issue");
         }
         return count;
     }

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class StateCensusAnalyserTest {
 
-    private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).json";
+    private static final String INDIAN_STATES_INFORMATION_FILE = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (1).csv";
     private static final Object INDIAN_STATES_INFORMATION_FILE1 = "/home/admin142/Desktop/IndianStateCensusProblem/StateCode (2).csv" ;
 
     @Test
@@ -40,7 +40,18 @@ public class StateCensusAnalyserTest {
             int numberOfRecord = stateCensusAnalyser.findNumberOfRecord(INDIAN_STATES_INFORMATION_FILE);
             Assert.assertEquals(37,numberOfRecord);
         } catch (CSVStateException e) {
-            Assert.assertEquals(CSVStateException.ExceptionType.FILE_TYPE_NOT_SUPPORTED ,e.type);
+            Assert.assertEquals(CSVStateException.ExceptionType.NO_SUCH_FILE ,e.type);
+        }
+    }
+
+    @Test
+    public void givenIndianStateInformation_whenDelimeterImproper_shouldHandleException() {
+        StateCensusAnalyser stateCensusAnalyser = new StateCensusAnalyser();
+        try {
+            int numberOfRecord = stateCensusAnalyser.findNumberOfRecord(INDIAN_STATES_INFORMATION_FILE);
+            Assert.assertEquals(37,numberOfRecord);
+        } catch (CSVStateException e) {
+            Assert.assertEquals(CSVStateException.ExceptionType.DELIMETER_EXCEPTION ,e.type);
         }
     }
 }
