@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b9d17e-606d-4c30-9d46-1428097fa1a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StateCensusData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StateCensusData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/opencsv/StateCensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/opencsv/StateCensusAnalyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +63,7 @@
       <recent name="com.opencsv" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenDelimeterImproper_shouldHandleException">
+  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest">
     <configuration name="StateCensusAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -80,12 +84,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StateCensusAnalyserTest.givenIndianStateInformation_whenDelimeterImproper_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StateCensusAnalyserTest.givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateInformation_whenDelimeterImproper_shouldHandleException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -100,12 +104,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StateCensusAnalyserTest.givenIndianStateInformation_whenImproperFile_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StateCensusAnalyserTest.givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateInformation_whenImproperFile_shouldHandleException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -120,12 +124,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StateCensusAnalyserTest.givenIndianStateInformation_whenNotSupportedFileType_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StateCensusAnalyserTest.givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateInformation_whenNotSupportedFileType_shouldHandleException&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenImproperFile_shouldHandleException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -140,12 +144,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StateCensusAnalyserTest.givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StateCensusAnalyserTest.givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.opencsv.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -162,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenDelimeterImproper_shouldHandleException" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords" />
         <item itemvalue="Gradle.StateCensusAnalyserTest" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenNotSupportedFileType_shouldHandleException" />
-        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenImproperFile_shouldHandleException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" />
+        <item itemvalue="Gradle.StateCensusAnalyserTest.givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" />
       </list>
     </recent_temporary>
   </component>
@@ -207,5 +211,51 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="286" y="58" key="#Project_Structure" timestamp="1575272412309">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state x="286" y="58" key="#Project_Structure/63.27.1303.741@63.27.1303.741" timestamp="1575272412309" />
+    <state width="1257" height="175" key="GridCell.Tab.0.bottom" timestamp="1575273968251">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="175" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1575273968251" />
+    <state width="1257" height="175" key="GridCell.Tab.0.center" timestamp="1575273968250">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="175" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1575273968250" />
+    <state width="1257" height="175" key="GridCell.Tab.0.left" timestamp="1575273968250">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="175" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1575273968250" />
+    <state width="1257" height="175" key="GridCell.Tab.0.right" timestamp="1575273968251">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="175" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1575273968251" />
+    <state width="1257" height="219" key="GridCell.Tab.1.bottom" timestamp="1575273029697">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="219" key="GridCell.Tab.1.bottom/63.27.1303.741@63.27.1303.741" timestamp="1575273029697" />
+    <state width="1257" height="219" key="GridCell.Tab.1.center" timestamp="1575273029696">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="219" key="GridCell.Tab.1.center/63.27.1303.741@63.27.1303.741" timestamp="1575273029696" />
+    <state width="1257" height="219" key="GridCell.Tab.1.left" timestamp="1575273029696">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="219" key="GridCell.Tab.1.left/63.27.1303.741@63.27.1303.741" timestamp="1575273029696" />
+    <state width="1257" height="219" key="GridCell.Tab.1.right" timestamp="1575273029697">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state width="1257" height="219" key="GridCell.Tab.1.right/63.27.1303.741@63.27.1303.741" timestamp="1575273029697" />
+    <state x="370" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1575272061416">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state x="370" y="224" key="com.intellij.ide.util.TipDialog/63.27.1303.741@63.27.1303.741" timestamp="1575272061416" />
+    <state x="410" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog" timestamp="1575276557709">
+      <screen x="63" y="27" width="1303" height="741" />
+    </state>
+    <state x="410" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog/63.27.1303.741@63.27.1303.741" timestamp="1575276557709" />
   </component>
 </project>

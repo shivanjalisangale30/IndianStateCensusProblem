@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-01T09:01:03" hostname="admin142-desktop" time="0.077">
+<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-12-02T08:55:25" hostname="admin1-desktop" time="0.061">
   <properties/>
-  <testcase name="givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.077"/>
+  <testcase name="givenIndianStateInformation_whenNotSupportedFileType_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.048"/>
+  <testcase name="givenIndianStateInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.002"/>
+  <testcase name="givenIndianStateCensusInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.002"/>
+  <testcase name="givenIndianStateInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.002"/>
+  <testcase name="givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.0"/>
+  <testcase name="givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateInformation_whenDelimeterImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
