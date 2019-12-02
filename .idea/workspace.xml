@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b9d17e-606d-4c30-9d46-1428097fa1a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.opencsv.StateCensusAnalyserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.opencsv.StateCensusAnalyserTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.opencsv.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.opencsv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.opencsv.StateCensusAnalyserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.opencsv.StateCensusAnalyserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,22 +223,22 @@
       <screen x="63" y="27" width="1303" height="741" />
     </state>
     <state x="286" y="58" key="#Project_Structure/63.27.1303.741@63.27.1303.741" timestamp="1575272412309" />
-    <state width="1257" height="175" key="GridCell.Tab.0.bottom" timestamp="1575276927393">
+    <state width="1257" height="175" key="GridCell.Tab.0.bottom" timestamp="1575277537412">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1257" height="175" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1575276927393" />
-    <state width="1257" height="175" key="GridCell.Tab.0.center" timestamp="1575276927392">
+    <state width="1257" height="175" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1575277537412" />
+    <state width="1257" height="175" key="GridCell.Tab.0.center" timestamp="1575277537411">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1257" height="175" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1575276927392" />
-    <state width="1257" height="175" key="GridCell.Tab.0.left" timestamp="1575276927391">
+    <state width="1257" height="175" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1575277537411" />
+    <state width="1257" height="175" key="GridCell.Tab.0.left" timestamp="1575277537410">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1257" height="175" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1575276927391" />
-    <state width="1257" height="175" key="GridCell.Tab.0.right" timestamp="1575276927392">
+    <state width="1257" height="175" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1575277537410" />
+    <state width="1257" height="175" key="GridCell.Tab.0.right" timestamp="1575277537411">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1257" height="175" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1575276927392" />
+    <state width="1257" height="175" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1575277537411" />
     <state width="1257" height="219" key="GridCell.Tab.1.bottom" timestamp="1575273029697">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
