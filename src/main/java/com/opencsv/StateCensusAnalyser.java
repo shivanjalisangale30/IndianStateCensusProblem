@@ -18,6 +18,9 @@ import java.util.*;
 
 public class StateCensusAnalyser {
 
+    String sortByState = "/home/admin1/Desktop/IndianStateCensusProblem/StateCensusData.json";
+    String sortByPopulation = "/home/admin1/Desktop/IndianStateCensusProblem/StateCensusData1.json";
+
     public int openCSVBuilder(String fileName) throws CSVStateException, IllegalAccessException {
         int count = 0;
         List<CSVStateCensus> list = new ArrayList<>();
@@ -35,7 +38,8 @@ public class StateCensusAnalyser {
                 list.add(csvUser);
                 count++;
             }
-            SortState(list);
+            SortByState(list,sortByState);
+            SortByPopulation(list,sortByPopulation);
 
         } catch (NoSuchFileException e) {
             throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "File not exist");
@@ -47,7 +51,20 @@ public class StateCensusAnalyser {
         return count;
     }
 
-    private void SortState(List<CSVStateCensus> list) {
+    private void SortByPopulation(List<CSVStateCensus> list,String fileName) {
+        for(int i=0;i<list.size()-1;i++){
+            for(int j=0;j<list.size()-i-1;j++){
+                if(list.get(j).getPopulation() < (list.get(j+1).getPopulation())){
+                    CSVStateCensus tempObj=list.get(j);
+                    list.set(j,list.get(j+1));
+                    list.set(j+1,tempObj);
+                }
+            }
+        }
+        writeToJsonFile(list,fileName);
+    }
+
+    private void SortByState(List<CSVStateCensus> list, String fileName) {
         for(int i=0;i<list.size()-1;i++){
             for(int j=0;j<list.size()-i-1;j++){
                 if(list.get(j).getState().compareTo(list.get(j+1).getState())>0){
@@ -57,16 +74,15 @@ public class StateCensusAnalyser {
                 }
             }
         }
-        writeToJsonFile(list);
+        writeToJsonFile(list,fileName);
     }
 
-    public  void writeToJsonFile(List<CSVStateCensus> list){
-        String filename="/home/admin1/Desktop/IndianStateCensusProblem/StateCensusData.json";
+    public  void writeToJsonFile(List<CSVStateCensus> list, String fileName){
         Gson gson = new Gson();
         String json = gson.toJson(list);
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(filename);
+            fileWriter = new FileWriter(fileName);
             fileWriter.write(json);
             fileWriter.close();
         } catch (IOException e) {
