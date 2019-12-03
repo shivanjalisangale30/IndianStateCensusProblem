@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-12-03T10:12:07" hostname="admin1-desktop" time="0.122">
+<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-12-03T12:18:11" hostname="admin1-desktop" time="0.325">
   <properties/>
-  <testcase name="givenIndianStateCensusInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.101"/>
-  <testcase name="givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.007"/>
+  <testcase name="givenIndianStateCensusInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.178"/>
+  <testcase name="givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.015"/>
+  <testcase name="givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.014"/>
   <testcase name="givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.006"/>
-  <testcase name="givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.005"/>
+  <testcase name="givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.109"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
