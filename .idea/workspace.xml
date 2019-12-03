@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6b9d17e-606d-4c30-9d46-1428097fa1a3" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/opencsv/StateCensusData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -29,6 +30,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/opencsv/CSVStates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/opencsv/CSVStates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/opencsv/StateCensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/opencsv/StateCensusAnalyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opencsv/StateCensusAnalyserTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> UC1_Analysing_Indian_State_Census_Information
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,11 @@
       <recent name="com.opencsv" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Gradle.StateCensusAnalyserTest">
+=======
+  <component name="RunManager" selected="Gradle.StateCensusAnalyserTest.givenIndianStateInformation_whenDelimeterImproper_shouldHandleException">
+>>>>>>> UC1_Analysing_Indian_State_Census_Information
     <configuration name="StateCensusAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
