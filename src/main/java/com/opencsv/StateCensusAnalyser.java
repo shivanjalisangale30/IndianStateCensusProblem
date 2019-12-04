@@ -19,6 +19,7 @@ public class StateCensusAnalyser<T extends Comparable<T>> {
 
     String sortByState = "/home/admin1/Desktop/IndianStateCensusProblem/SortByState.json";
     String sortByPopulation = "/home/admin1/Desktop/IndianStateCensusProblem/SortByPopulation.json";
+    String sortByDensity = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByPopulationDensity.json";
 
     public int openCSVBuilder(String fileName) throws CSVStateException, IllegalAccessException {
         int count = 0;
@@ -38,6 +39,7 @@ public class StateCensusAnalyser<T extends Comparable<T>> {
 
             ascendingSort(list, "getState", sortByState);
             descendingSort(list, "getPopulation", sortByPopulation);
+            descendingSort(list,"getDensityPerSqKm",sortByDensity );
 
         } catch (NoSuchFileException e) {
             throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "File not exist");
