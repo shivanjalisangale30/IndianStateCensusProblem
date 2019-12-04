@@ -3,6 +3,7 @@ package com.opencsv;
 import com.google.gson.Gson;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import org.junit.runner.manipulation.Sortable;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class StateCensusAnalyser {
+public class StateCensusAnalyser<T> {
 
     String sortByState = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByState.json";
     String sortByPopulation = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByPopulation.json";
@@ -78,7 +79,6 @@ public class StateCensusAnalyser {
         writeToJsonFile(list,fileName);
     }
 
-
     public  void writeToJsonFile(List<CSVStateCensus> list, String fileName){
         Gson gson = new Gson();
         String json = gson.toJson(list);
@@ -93,6 +93,6 @@ public class StateCensusAnalyser {
     }
 
 
-
 }
+
 
