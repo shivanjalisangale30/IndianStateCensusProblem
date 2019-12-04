@@ -17,6 +17,7 @@ public class StateCensusAnalyser {
     String sortByState = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByState.json";
     String sortByPopulation = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByPopulation.json";
     String sortByPopulationDensity = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByPopulationDensity.json";
+    String sortByArea = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByArea.json";
 
     public int openCSVBuilder(String fileName) throws CSVStateException, IllegalAccessException {
         int count = 0;
@@ -38,7 +39,7 @@ public class StateCensusAnalyser {
             }
 
            SortByState(list,sortByState);
-            Sort(list,sortByPopulationDensity);
+            Sort(list,sortByArea);
 
         } catch (NoSuchFileException e) {
             throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "File not exist");
@@ -53,7 +54,7 @@ public class StateCensusAnalyser {
     private void Sort(List<CSVStateCensus> list,String fileName) {
         for(int i=0;i<list.size()-1;i++){
             for(int j=0;j<list.size()-i-1;j++){
-                if(list.get(j).getDensityPerSqKm() < (list.get(j+1).getDensityPerSqKm())){
+                if(list.get(j).getAreaInSqKm() < (list.get(j+1).getAreaInSqKm())){
                     CSVStateCensus tempObj=list.get(j);
                     list.set(j,list.get(j+1));
                     list.set(j+1,tempObj);
