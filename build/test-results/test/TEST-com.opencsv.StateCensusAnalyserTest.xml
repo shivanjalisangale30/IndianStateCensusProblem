@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-12-04T13:45:00" hostname="admin1-desktop" time="0.166">
+<testsuite name="com.opencsv.StateCensusAnalyserTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-12-07T13:26:54" hostname="admin1-desktop" time="0.249">
   <properties/>
-  <testcase name="givenIndianStateCensusInformation_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.122"/>
-  <testcase name="givenIndianStateCensusInformation_whenImproperFile_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
-  <testcase name="givenIndianStateCensusInformation_whenNotSupportedFileType_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.015"/>
-  <testcase name="givenIndianStateCensusInformation_whenDelimeterImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.012"/>
-  <testcase name="givenIndianStateCensusInformation_whenHeaderImproper_shouldHandleException" classname="com.opencsv.StateCensusAnalyserTest" time="0.011"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenSortInAscendingOrder_shouldGiveStateInAlphabeticOrder" classname="com.opencsv.StateCensusAnalyserTest" time="0.129"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenNotSupportedFileType_shouldHandlNoSuchFileeException" classname="com.opencsv.StateCensusAnalyserTest" time="0.012"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenImproperFile_shouldHandlNoSuchFileeException" classname="com.opencsv.StateCensusAnalyserTest" time="0.001"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenSortInDesendingOrder_shouldGiveMostPopulousState" classname="com.opencsv.StateCensusAnalyserTest" time="0.025"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenHeaderImproper_shouldHandleDelimeterException" classname="com.opencsv.StateCensusAnalyserTest" time="0.012"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenDelimeterImproper_shouldHandleDelimeterException" classname="com.opencsv.StateCensusAnalyserTest" time="0.023"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenProperAnalyse_shouldMatchRecords" classname="com.opencsv.StateCensusAnalyserTest" time="0.024"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenSortInDesendingOrder_shouldGiveMostLargestStateByArea" classname="com.opencsv.StateCensusAnalyserTest" time="0.008"/>
+  <testcase name="givenIndianStateCensusInformationFile_whenSortInDesendingOrder_shouldGiveMostPopulationDensityState" classname="com.opencsv.StateCensusAnalyserTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

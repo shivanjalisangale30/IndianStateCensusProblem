@@ -17,84 +17,83 @@ import java.util.*;
 
 public class StateCensusAnalyser<T extends Comparable<T>> {
 
-    String sortByState = "/home/admin1/Desktop/IndianStateCensusProblem/SortByState.json";
-    String sortByPopulation = "/home/admin1/Desktop/IndianStateCensusProblem/SortByPopulation.json";
-    String sortByDensity = "/home/admin1/Desktop/IndianStateCensusProblem/SortedByPopulationDensity.json";
-    String sortByArea = "/home/admin1/Desktop/IndianStateCensusProblem/SortByArea.json";
-
-    public int openCSVBuilder(String fileName) throws CSVStateException, IllegalAccessException {
+    public List openCSVBuilder(String fileName) throws StateCensusAnalayserException {
         int count = 0;
-        List<CSVStateCensus> list = new ArrayList<>();
+        List<CSVStateCensus> csvStateCensusList = null;
         try {
             Reader reader = Files.newBufferedReader(Paths.get(fileName));
             CsvToBean<CSVStateCensus> csvToBean = new CsvToBeanBuilder(reader)
                     .withType(CSVStateCensus.class)
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
-            Iterator<CSVStateCensus> csvUserIterator = csvToBean.iterator();
-            while (csvUserIterator.hasNext()) {
-                CSVStateCensus csvUser = csvUserIterator.next();
-                list.add(csvUser);
-                count++;
-            }
 
-            ascendingSort(list, "getState", sortByState);
-            descendingSort(list, "getPopulation", sortByPopulation);
-            descendingSort(list,"getDensityPerSqKm",sortByDensity );
-            descendingSort(list,"getAreaInSqKm",sortByArea );
+            csvStateCensusList = csvToBean.parse();
 
         } catch (NoSuchFileException e) {
-            throw new CSVStateException(CSVStateException.ExceptionType.NO_SUCH_FILE, "File not exist");
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.NO_SUCH_FILE, "File not exist");
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.INPUT_OUTPUT_ISSUE, "Input Output issue");
         } catch (RuntimeException e) {
-            throw new CSVStateException(CSVStateException.ExceptionType.DELIMETER_EXCEPTION, "File delimeter Issue Or Hearder Issue");
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.DELIMETER_EXCEPTION, "File delimeter Issue Or Hearder Issue");
+        }
+        return csvStateCensusList;
+    }
+
+    public List ascendingSort(List<CSVStateCensus> list, String methodname) throws StateCensusAnalayserException {
+        try {
+            for (int i = 0; i < list.size() - 1; i++) {
+                for (int j = 0; j < list.size() - i - 1; j++) {
+                    Class cls = list.get(j).getClass();
+                    Method methodcall = cls.getDeclaredMethod("get" + methodname);
+                    T value1 = (T) methodcall.invoke(list.get(j));
+                    Class cls1 = list.get(j + 1).getClass();
+                    Method methodcall1 = cls1.getDeclaredMethod("get" + methodname);
+                    T value2 = (T) methodcall1.invoke(list.get(j + 1));
+                    if (value1.compareTo(value2) > 0) {
+                        CSVStateCensus tempObj = list.get(j);
+                        list.set(j, list.get(j + 1));
+                        list.set(j + 1, tempObj);
+                    }
+                }
+            }
+        } catch ( IllegalAccessException e) {
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.NO_SUCH_METHOD);
         } catch (InvocationTargetException e) {
-            e.printStackTrace();
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.INVOCATION_TARGET);
+        } catch (NoSuchMethodException e) {
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.ILLEGAL_ACCESS);
         }
-        return count;
+        return list;
     }
 
-    void ascendingSort(List<CSVStateCensus> list, String methodname, String fileName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        for (int i = 0; i < list.size() - 1; i++) {
-            for (int j = 0; j < list.size() - i - 1; j++) {
-                Class cls = list.get(j).getClass();
-                Method methodcall = cls.getDeclaredMethod(methodname);
-                T value1 = (T) methodcall.invoke(list.get(j));
-                Class cls1 = list.get(j + 1).getClass();
-                Method methodcall1 = cls1.getDeclaredMethod(methodname);
-                T value2 = (T) methodcall1.invoke(list.get(j + 1));
-                if (value1.compareTo(value2) > 0) {
-                    CSVStateCensus tempObj = list.get(j);
-                    list.set(j, list.get(j + 1));
-                    list.set(j + 1, tempObj);
+    public List descendingSort(List<CSVStateCensus> list, String methodname) throws StateCensusAnalayserException {
+        try {
+            for (int i = 0; i < list.size() - 1; i++) {
+                for (int j = 0; j < list.size() - i - 1; j++) {
+                    Class cls = list.get(j).getClass();
+                    Method methodcall = cls.getDeclaredMethod("get" + methodname);
+                    T value1 = (T) methodcall.invoke(list.get(j));
+                    Class cls1 = list.get(j + 1).getClass();
+                    Method methodcall1 = cls1.getDeclaredMethod("get" + methodname);
+                    T value2 = (T) methodcall1.invoke(list.get(j + 1));
+                    if (value1.compareTo(value2) < 0) {
+                        CSVStateCensus tempObj = list.get(j);
+                        list.set(j, list.get(j + 1));
+                        list.set(j + 1, tempObj);
+                    }
                 }
             }
+        } catch ( IllegalAccessException e) {
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.NO_SUCH_METHOD);
+        } catch (InvocationTargetException e) {
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.INVOCATION_TARGET);
+        } catch (NoSuchMethodException e) {
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.ILLEGAL_ACCESS);
         }
-        writeToJsonFile(list, fileName);
+        return list;
     }
 
-    void descendingSort(List<CSVStateCensus> list, String methodname, String fileName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        for (int i = 0; i < list.size() - 1; i++) {
-            for (int j = 0; j < list.size() - i - 1; j++) {
-                Class cls = list.get(j).getClass();
-                Method methodcall = cls.getDeclaredMethod(methodname);
-                T value1 = (T) methodcall.invoke(list.get(j));
-                Class cls1 = list.get(j + 1).getClass();
-                Method methodcall1 = cls1.getDeclaredMethod(methodname);
-                T value2 = (T) methodcall1.invoke(list.get(j + 1));
-                if (value1.compareTo(value2) < 0) {
-                    CSVStateCensus tempObj = list.get(j);
-                    list.set(j, list.get(j + 1));
-                    list.set(j + 1, tempObj);
-                }
-            }
-        }
-        writeToJsonFile(list, fileName);
-    }
-    public void writeToJsonFile(List<CSVStateCensus> list, String fileName) {
+    private void writeToJsonFile(List<CSVStateCensus> list, String fileName) throws StateCensusAnalayserException {
         Gson gson = new Gson();
         String json = gson.toJson(list);
         FileWriter fileWriter = null;
@@ -103,10 +102,23 @@ public class StateCensusAnalyser<T extends Comparable<T>> {
             fileWriter.write(json);
             fileWriter.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new StateCensusAnalayserException(StateCensusAnalayserException.ExceptionType.INPUT_OUTPUT_ISSUE, "Input Output issue");
         }
     }
 
+    public List ascendingData(String csvFileName, String sortBy, String jsonFile) throws StateCensusAnalayserException {
+        List dataList = openCSVBuilder(csvFileName);
+        List ascendData = ascendingSort(dataList, sortBy);
+        writeToJsonFile(ascendData, jsonFile);
+        return ascendData;
+    }
+
+    public List descendingData(String csvFileName, String sortBy, String jsonFile) throws StateCensusAnalayserException {
+        List dataList = openCSVBuilder(csvFileName);
+        List ascendData = descendingSort(dataList, sortBy);
+        writeToJsonFile(ascendData, jsonFile);
+        return ascendData;
+    }
 }
 
 
